@@ -2,6 +2,13 @@ import React from "react";
 import { profileData } from "../../data/index";
 
 const Hero = () => {
+  const handleScrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="home" className="ms-hero margin-b-50">
       <div className="ms-diamond-1"></div>
@@ -45,7 +52,13 @@ const Hero = () => {
           <div className="art"></div>
         </div>
       </div>
-      <div className="scroll-next" data-scroll="about">
+
+      {/* scroll-next: arrow sudah otomatis muncul via CSS ::after pada .text */}
+      <div
+        className="scroll-next"
+        onClick={handleScrollToAbout}
+        style={{ cursor: "pointer" }}
+      >
         <div className="ms-container">
           <span className="menu">
             <span className="text"></span>

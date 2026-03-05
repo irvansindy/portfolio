@@ -24,8 +24,9 @@ const BackToTop = () => {
   }, []);
 
   return (
+    // ✅ Fix: "active-progress" sesuai SCSS (.progress-wrap.active-progress)
     <div
-      className={`progress-wrap ${isVisible ? "active" : ""}`}
+      className={`progress-wrap ${isVisible ? "active-progress" : ""}`}
       onClick={scrollToTop}
       style={{ cursor: "pointer" }}
     >
