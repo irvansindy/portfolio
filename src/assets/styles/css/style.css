@@ -17,7 +17,7 @@ body {
   font-family: "Poppins, sans-serif";
   font-weight: 400;
   top: 0 !important;
-  background-image: url(../img/designs/main-bg.png);
+  background-image: url(../images/designs/main-bg.png);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -490,7 +490,7 @@ header nav a:hover .svg_img {
   position: absolute;
   left: 22%;
   top: 15%;
-  background-image: url("../img/designs/1.png");
+  background-image: url("../images/designs/1.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -500,7 +500,7 @@ header nav a:hover .svg_img {
   position: absolute;
   left: 15%;
   bottom: 20%;
-  background-image: url("../img/designs/2.png");
+  background-image: url("../images/designs/2.png");
   background-size: contain;
   background-repeat: no-repeat;
   -webkit-animation: rotateshape 15s linear infinite;
@@ -512,7 +512,7 @@ header nav a:hover .svg_img {
   position: absolute;
   left: 31%;
   bottom: 5%;
-  background-image: url("../img/designs/3.png");
+  background-image: url("../images/designs/3.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -522,7 +522,7 @@ header nav a:hover .svg_img {
   position: absolute;
   right: 20%;
   top: 75%;
-  background-image: url("../img/designs/4.png");
+  background-image: url("../images/designs/4.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -532,7 +532,7 @@ header nav a:hover .svg_img {
   position: absolute;
   right: 24%;
   top: 13%;
-  background-image: url("../img/designs/5.png");
+  background-image: url("../images/designs/5.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -670,7 +670,7 @@ header nav a:hover .svg_img {
 .ms-hero .hero-content .art {
   width: 18px;
   height: 190px;
-  background-image: url(../img/designs/6.png);
+  background-image: url(../images/designs/6.png);
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
@@ -804,7 +804,7 @@ header nav a:hover .svg_img {
   width: 50px;
   height: 50px;
   margin: auto;
-  background-image: url("../img/designs/scroll-arrow.png");
+  background-image: url("../images/designs/scroll-arrow.png");
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
@@ -976,7 +976,7 @@ header nav a:hover .svg_img {
   stroke: #ddd !important;
 }
 .ms-about .ms-box .progress .fill {
-  stroke: #716fff;
+  stroke: #716fff !important;
 }
 .ms-about .ms-box .progress .fill {
   stroke-dasharray: 219.9907836914;
@@ -1053,7 +1053,7 @@ header nav a:hover .svg_img {
   bottom: 5%;
   -webkit-transform: rotate(248deg);
   transform: rotate(248deg);
-  background-image: url(../img/designs/7.png);
+  background-image: url(../images/designs/7.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1066,7 +1066,7 @@ header nav a:hover .svg_img {
   top: 5%;
   -webkit-transform: rotate(248deg);
   transform: rotate(248deg);
-  background-image: url(../img/designs/3.png);
+  background-image: url(../images/designs/3.png);
   background-repeat: no-repeat;
 }
 .service-box .main-box .box-back {
@@ -1607,7 +1607,7 @@ li.mixitup-control-active {
   top: -13%;
   -webkit-transform: rotate(248deg);
   transform: rotate(248deg);
-  background-image: url(../img/designs/4.png);
+  background-image: url(../images/designs/4.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -2039,7 +2039,7 @@ footer .ms-footer-detail .ms-social ul li a:hover {
   bottom: 5%;
   -webkit-transform: rotate(248deg);
   transform: rotate(248deg);
-  background-image: url(../img/designs/2.png);
+  background-image: url(../images/designs/2.png);
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.1;

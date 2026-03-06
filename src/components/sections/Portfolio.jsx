@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
-import { portfolioData } from '../../data/portfolioData';
+import React, { useState } from "react";
+import { portfolioData } from "../../data/portfolioData";
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState("all");
 
-  const filters = ['all', 'design', 'development', 'graphics', 'templates'];
+  const filters = ["all", "design", "development", "graphics", "templates"];
 
-  const filteredProjects = activeFilter === 'all'
-    ? portfolioData
-    : portfolioData.filter(project => project.category.includes(activeFilter));
+  const filteredProjects =
+    activeFilter === "all"
+      ? portfolioData
+      : portfolioData.filter((project) =>
+          project.category.includes(activeFilter),
+        );
 
   return (
     <section id="portfolio" className="ms-portfolio padding-tb-80">
       <div className="container">
         <div className="section-title">
-          <h2>My <span>Projects</span></h2>
+          <h2>
+            My <span>Projects</span>
+          </h2>
           <span className="ligh-title">Portfolio</span>
         </div>
         <div className="row m-b-minus-24px">
@@ -27,11 +32,11 @@ const Portfolio = () => {
                       {filters.map((filter) => (
                         <li
                           key={filter}
-                          className={`filter ${activeFilter === filter ? 'active' : ''}`}
+                          className={`filter ${activeFilter === filter ? "active" : ""}`}
                           onClick={() => setActiveFilter(filter)}
-                          style={{ cursor: 'pointer' }}
+                          style={{ cursor: "pointer" }}
                         >
-                          {filter === 'all' ? 'ALL' : filter.toUpperCase()}
+                          {filter === "all" ? "ALL" : filter.toUpperCase()}
                         </li>
                       ))}
                     </ul>
@@ -47,8 +52,10 @@ const Portfolio = () => {
                             <div className="links">
                               {project.category.map((cat, idx) => (
                                 <span key={idx}>
-                                  <a href="#">{cat.charAt(0).toUpperCase() + cat.slice(1)}</a>
-                                  {idx < project.category.length - 1 && ' | '}
+                                  <a href="#">
+                                    {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                                  </a>
+                                  {idx < project.category.length - 1 && " | "}
                                 </span>
                               ))}
                             </div>

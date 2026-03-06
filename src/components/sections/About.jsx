@@ -71,7 +71,7 @@ const About = () => {
                 {skillsData.map((skill) => (
                   <div key={skill.id} className="col-md-6">
                     <div className="ms-box">
-                      {skill.icon && (
+                      {/* {skill.icon && (
                         <img
                           src={skill.icon}
                           alt={skill.name}
@@ -81,7 +81,7 @@ const About = () => {
                             marginBottom: "10px",
                           }}
                         />
-                      )}
+                      )} */}
                       <svg
                         className={`progress noselect ${skill.active ? "active" : ""}`}
                         data-progress={skill.percentage}
@@ -96,9 +96,10 @@ const About = () => {
                         <path
                           className="fill"
                           d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0"
+                          style={{ strokeDashoffset: -28.598801879882814 }}
                         />
                         <text className="value" x="50%" y="58%">
-                          0%
+                          {skill.percentage}%
                         </text>
                       </svg>
                       <h3>{skill.name}</h3>

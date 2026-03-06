@@ -9,7 +9,7 @@ const WhatsAppWidget = () => {
       id: 1,
       name: "Maria W Ilvor",
       status: "Maria left 7 mins ago",
-      image: "assets/images/chat/profile_02.jpg",
+      image: "/assets/images/chat/profile_02.jpg", // ✅ public path
       isOnline: false,
       number: contactData.whatsappNumber,
       message: contactData.whatsappMessage,
@@ -18,7 +18,7 @@ const WhatsAppWidget = () => {
       id: 2,
       name: "William Ilvor",
       status: "William is online",
-      image: "assets/images/chat/profile_01.jpg",
+      image: "/assets/images/chat/profile_01.jpg", // ✅ public path
       isOnline: true,
       number: contactData.whatsappNumber,
       message: contactData.whatsappMessage,
@@ -32,41 +32,31 @@ const WhatsAppWidget = () => {
 
   return (
     <div className="ms-style ms-right-bottom">
-      {/* Floating Panel Container */}
       <div className={`ms-panel ${isOpen ? "active" : ""}`}>
-        {/* Panel Header */}
         <div className="ms-header">
           <strong>Need Help?</strong>
           <p>Chat with us on WhatsApp</p>
         </div>
-        {/* Panel Content */}
         <div className="ms-body">
           <ul>
             {contacts.map((contact) => (
               <li key={contact.id}>
                 <a
                   className="ms-list"
-                  onClick={() =>
-                    handleWhatsApp(contact.number, contact.message)
-                  }
+                  onClick={() => handleWhatsApp(contact.number, contact.message)}
                   style={{ cursor: "pointer" }}
                 >
                   <div className="d-flex bd-highlight">
-                    {/* Profile Picture */}
                     <div className="ms-img-cont">
                       <img
                         src={contact.image}
                         className="ms-user-img"
                         alt="Profile"
                       />
-                      {contact.isOnline && (
-                        <span className="ms-status-icon ms-online"></span>
-                      )}
-                      {!contact.isOnline && (
-                        <span className="ms-status-icon"></span>
-                      )}
+                      <span
+                        className={`ms-status-icon ${contact.isOnline ? "ms-online" : ""}`}
+                      ></span>
                     </div>
-                    {/* Display Name & Status */}
                     <div className="ms-user-info">
                       <span>{contact.name}</span>
                       <p>{contact.status}</p>
@@ -79,7 +69,6 @@ const WhatsAppWidget = () => {
         </div>
       </div>
 
-      {/* Right Floating Button */}
       <div className="ms-right-bottom">
         <div className="ms-box">
           <div
@@ -87,7 +76,7 @@ const WhatsAppWidget = () => {
             onClick={() => setIsOpen(!isOpen)}
             style={{ cursor: "pointer" }}
           >
-            <i className="fa fa-whatsapp"></i>
+            <i className="fa-brands fa-whatsapp"></i>
           </div>
         </div>
       </div>

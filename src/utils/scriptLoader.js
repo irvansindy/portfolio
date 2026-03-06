@@ -1,11 +1,9 @@
-/**
- * Script loader utility for external libraries
- * Used to load jQuery, tilt.js, slick, fancybox, etc.
- */
-
+// /**
+//  * Script loader utility for external libraries
+//  * Used to load jQuery, tilt.js, slick, fancybox, etc.
+//  */
 export const loadExternalScript = (src, id = null) => {
   return new Promise((resolve, reject) => {
-    // Check if script already exists
     if (id && document.getElementById(id)) {
       resolve();
       return;
@@ -13,67 +11,66 @@ export const loadExternalScript = (src, id = null) => {
 
     const script = document.createElement("script");
     script.src = src;
-    script.async = true;
+    script.async = false;
 
     if (id) {
       script.id = id;
     }
 
     script.onload = () => resolve();
-    script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+    script.onerror = () => reject(`Failed to load ${src}`);
 
     document.body.appendChild(script);
   });
 };
 
-export const loadExternalStyles = (href, id = null) => {
-  return new Promise((resolve, reject) => {
-    // Check if style already exists
-    if (id && document.getElementById(id)) {
-      resolve();
-      return;
-    }
-
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = href;
-
-    if (id) {
-      link.id = id;
-    }
-
-    link.onload = () => resolve();
-    link.onerror = () => reject(new Error(`Failed to load style: ${href}`));
-
-    document.head.appendChild(link);
-  });
-};
-
-/**
- * Initialize external libraries
- */
 export const initializeExternalLibraries = async () => {
   try {
-    // Load jQuery (if needed)
-    // await loadExternalScript('assets/js/vendor/jquery-3.1.1.min.js', 'jquery-script');
+    // jQuery (WAJIB pertama)
+    await loadExternalScript("/assets/js/vendor/jquery-3.1.1.min.js", "jquery");
 
-    // Load tilt.js for 3D card effect
-    // await loadExternalScript('assets/js/vendor/tilt.jquery.js', 'tilt-script');
+    // Bootstrap
+    await loadExternalScript(
+      "/assets/js/vendor/bootstrap.bundle.min.js",
+      "bootstrap"
+    );
 
-    // Load slick carousel
-    // await loadExternalScript('assets/js/vendor/slick.min.js', 'slick-script');
+    // Tilt effect
+    await loadExternalScript(
+      "/assets/js/vendor/tilt.jquery.js",
+      "tilt"
+    );
 
-    // Load fancybox for image lightbox
-    // await loadExternalScript('assets/js/vendor/jquery.fancybox.min.js', 'fancybox-script');
+    // Mixitup
+    await loadExternalScript(
+      "/assets/js/vendor/mixitup.min.js",
+      "mixitup"
+    );
 
-    // Load mixitup for portfolio filtering
-    // await loadExternalScript('assets/js/vendor/mixitup.min.js', 'mixitup-script');
+    // Fancybox
+    await loadExternalScript(
+      "/assets/js/vendor/jquery.fancybox.min.js",
+      "fancybox"
+    );
 
-    // Load tweenmax for animations
-    // await loadExternalScript('assets/js/vendor/tweenmax.min.js', 'tweenmax-script');
+    // Slick slider
+    await loadExternalScript(
+      "/assets/js/vendor/slick.min.js",
+      "slick"
+    );
 
-    console.log("External libraries initialized");
-  } catch (error) {
-    console.error("Error initializing external libraries:", error);
+    // TweenMax (animasi scroll arrow)
+    await loadExternalScript(
+      "/assets/js/vendor/tweenmax.min.js",
+      "tweenmax"
+    );
+
+    // MAIN TEMPLATE SCRIPT
+    await loadExternalScript(
+      "/assets/js/script.js",
+      "main-script"
+    );
+  } catch (err) {
+    console.error(err);
   }
 };

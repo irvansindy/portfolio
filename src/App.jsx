@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-
+import { initializeExternalLibraries } from "./utils/scriptLoader";
 // Custom Hooks
 import { useScrollSmooth, useScrollProgress } from "./hooks/useScroll";
 
@@ -32,6 +32,12 @@ function App() {
   // Use custom hooks
   useScrollSmooth();
   useScrollProgress();
+
+  useEffect(() => {
+    setTimeout(() => {
+      initializeExternalLibraries();
+    }, 300);
+  }, []);
 
   // Hide loader when component mounts
   useEffect(() => {

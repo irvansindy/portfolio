@@ -13,7 +13,7 @@ Panduan lengkap tentang bagaimana template Masterly HTML di-convert ke React Com
 ```html
 <header>
   <nav>
-    <a href="javascript:void(0)" class="ms-sidebar-toggle">
+    <a href="#" class="ms-sidebar-toggle">
       <img src="assets/images/icons/menu.svg" class="svg_img" alt="menu" />
     </a>
   </nav>

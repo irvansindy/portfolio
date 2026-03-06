@@ -314,7 +314,7 @@ header {
 		position: absolute;
 		left: 22%;
 		top: 15%;
-		background-image: url("/assets/images/designs/1.png");
+		background-image: url("../images/designs/1.png");
 		background-size: contain;
 		background-repeat: no-repeat;
     opacity: .1;
@@ -325,7 +325,7 @@ header {
 		position: absolute;
 		left: 15%;
 		bottom: 20%;
-		background-image: url("/assets/images/designs/2.png");
+		background-image: url("../images/designs/2.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 		animation: rotateshape 15s linear infinite;
@@ -337,7 +337,7 @@ header {
 		position: absolute;
 		left: 31%;
     	bottom: 5%;
-		background-image: url("/assets/images/designs/3.png");
+		background-image: url("../images/designs/3.png");
 		background-size: contain;
 		background-repeat: no-repeat;
     opacity: .1;
@@ -348,7 +348,7 @@ header {
 		position: absolute;
 		right: 20%;
 		top: 75%;
-		background-image: url("/assets/images/designs/4.png");
+		background-image: url("../images/designs/4.png");
 		background-size: contain;
 		background-repeat: no-repeat;
     opacity: .1;
@@ -359,7 +359,7 @@ header {
 		position: absolute;
 		right: 24%;
     	top: 13%;
-		background-image: url("/assets/images/designs/5.png");
+		background-image: url("../images/designs/5.png");
 		background-size: contain;
 		background-repeat: no-repeat;
     opacity: .1;
@@ -461,7 +461,7 @@ header {
 		.art {
 			width: 18px;
 			height: 190px;
-			background-image: url(/assets/images/designs/6.png);
+			background-image: url(../images/designs/6.png);
 			background-repeat: no-repeat;
 			background-size: 100%;
 			position: absolute;
@@ -568,7 +568,7 @@ header {
 			  width: 50px;
 			  height: 50px;
 			  margin: auto;
-			background-image: url("/assets/images/designs/scroll-arrow-dark.png");
+			background-image: url("../images/designs/scroll-arrow-dark.png");
 			background-repeat: no-repeat;
 			background-size: 100%;
 			position: absolute;
@@ -905,7 +905,7 @@ header {
       right: -15%;
       top: -13%;
       transform: rotate(248deg);
-      background-image: url(/assets/images/designs/4.png);
+      background-image: url(../images/designs/4.png);
       background-size: contain;
       background-repeat: no-repeat;
       opacity: .1;
@@ -1378,7 +1378,7 @@ li.mixitup-control-active {
 				left: 15%;
 				bottom: 5%;
 				transform: rotate(248deg);
-				background-image: url(/assets/images/designs/7.png);
+				background-image: url(../images/designs/7.png);
 				background-size: contain;
 				background-repeat: no-repeat;
         opacity: .1;
@@ -1391,7 +1391,7 @@ li.mixitup-control-active {
 				right: 1%;
 				top: 5%;
 				transform: rotate(248deg);
-				background-image: url(/assets/images/designs/3.png);
+				background-image: url(../images/designs/3.png);
 				background-repeat: no-repeat;
         opacity: .1;
 			}
@@ -1636,7 +1636,7 @@ li.mixitup-control-active {
 		left: 15%;
 		bottom: 5%;
 		transform: rotate(248deg);
-		background-image: url(/assets/images/designs/2.png);
+		background-image: url(../images/designs/2.png);
 		background-size: contain;
 		background-repeat: no-repeat;
 		opacity: 0.1;
@@ -1764,7 +1764,7 @@ footer {
 		.whatsapp {
 			width: 23px;
 			height: 23px;
-			background-image: url(/assets/images/common/whatsapp.png);
+			background-image: url(../images/common/whatsapp.png);
 			background-repeat: no-repeat;
 			background-size: 100%;
 			display: table;

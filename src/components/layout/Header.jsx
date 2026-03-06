@@ -1,12 +1,15 @@
-import React from 'react';
-import menuIcon from '../../assets/images/icons/menu.svg';
+import React from "react";
 
 const Header = ({ onMenuClick }) => {
   return (
     <header>
       <nav>
-        <a href="javascript:void(0)" className="ms-sidebar-toggle" onClick={onMenuClick}>
-          <img src={menuIcon} className="svg_img" alt="menu" />
+        <a href="#" className="ms-sidebar-toggle" onClick={onMenuClick}>
+          <img
+            src="/assets/images/icons/menu.svg"
+            className="svg_img"
+            alt="menu"
+          />
         </a>
       </nav>
     </header>
