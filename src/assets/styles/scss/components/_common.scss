@@ -12,7 +12,7 @@ body {
 	font-family: $fontfamily-poppins;
 	font-weight: 400;
 	top: 0 !important;
-	background-image: url(../img/designs/main-bg.png);
+	background-image: url(/assets/images/designs/main-bg.png);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
@@ -357,8 +357,8 @@ p {
 		}
 	}
 	svg {
-		path { 
-			fill: none; 
+		path {
+			fill: none;
 		}
 	}
 	svg.progress-circle {

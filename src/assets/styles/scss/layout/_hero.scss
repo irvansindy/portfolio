@@ -13,7 +13,7 @@
 		position: absolute;
 		left: 22%;
 		top: 15%;
-		background-image: url("../img/designs/1.png");
+		background-image: url("/assets/images/designs/1.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
@@ -23,7 +23,7 @@
 		position: absolute;
 		left: 15%;
 		bottom: 20%;
-		background-image: url("../img/designs/2.png");
+		background-image: url("/assets/images/designs/2.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 		animation: rotateshape 15s linear infinite;
@@ -34,7 +34,7 @@
 		position: absolute;
 		left: 31%;
     	bottom: 5%;
-		background-image: url("../img/designs/3.png");
+		background-image: url("/assets/images/designs/3.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
@@ -44,7 +44,7 @@
 		position: absolute;
 		right: 20%;
 		top: 75%;
-		background-image: url("../img/designs/4.png");
+		background-image: url("/assets/images/designs/4.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
@@ -54,7 +54,7 @@
 		position: absolute;
 		right: 24%;
     	top: 13%;
-		background-image: url("../img/designs/5.png");
+		background-image: url("/assets/images/designs/5.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
@@ -156,7 +156,7 @@
 		.art {
 			width: 18px;
 			height: 190px;
-			background-image: url(../img/designs/6.png);
+			background-image: url(/assets/images/designs/6.png);
 			background-repeat: no-repeat;
 			background-size: 100%;
 			position: absolute;
@@ -174,7 +174,7 @@
 			  }
 		}
 	}
-	
+
 }
 /**  On click scroll  **/
 .scroll-next {
@@ -195,7 +195,7 @@
 	animation-iteration-count: infinite;
 	-webkit-animation-iteration-count: infinite;
 	cursor: pointer;
-	
+
 	@keyframes bounce {
 		0%, 100%, 20%, 50%, 80% {
 			-webkit-transform: translateY(0);
@@ -226,7 +226,7 @@
 	  left: 0;
 	  color: $ms-0-color;
 	}
-	
+
 	.circle{
 	  display: inline-block;
 	  width:70px;
@@ -241,7 +241,7 @@
 	  margin-top:-50px;
 	  z-index: 4;
 	}
-	
+
 	.text{
 	  position:absolute;
 	  top: 43%;
@@ -262,14 +262,14 @@
 			  width: 50px;
 			  height: 50px;
 			  margin: auto;
-			background-image: url("../img/designs/scroll-arrow.png");
+			background-image: url("/assets/images/designs/scroll-arrow.png");
 			background-repeat: no-repeat;
 			background-size: 100%;
 			position: absolute;
 			top: -14px;
 			left: 0;
 			right: 0;
-			
+
 	  }
-	}  
+	}
   }
