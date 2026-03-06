@@ -8,13 +8,13 @@ const Experience = () => {
         <div className="row">
           <div className="section-title">
             <h2>
-              My <span>Resume</span>
+              Resume <span>Saya</span>
             </h2>
-            <span className="ligh-title">Achievements</span>
+            <span className="ligh-title">Prestasi</span>
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12">
             <div className="education ms-ex-box m-b-991">
-              <h4>Education</h4>
+              <h4>Pendidikan</h4>
               <ul className="timeline">
                 {experienceData.education.map((edu) => (
                   <li
@@ -40,7 +40,7 @@ const Experience = () => {
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12">
             <div className="experiense ms-ex-box">
-              <h4>Experience</h4>
+              <h4>Pengalaman</h4>
               <ul className="timeline">
                 {experienceData.experience.map((exp) => (
                   <li key={exp.id} className="timeline-item">

@@ -8,44 +8,40 @@ const About = () => {
         <div className="row">
           <div className="section-title">
             <h2>
-              About<span> Me</span>
+              Tentang<span> Saya</span>
             </h2>
-            <span className="ligh-title">About</span>
+            <span className="ligh-title">Tentang</span>
           </div>
           <div className="col-lg-6">
             <div className="ms-about-detail m-b-991">
               <h4>{profileData.tagline}</h4>
               <p className="ms-text">
-                I am your client Consultant having <b>8+ years</b> of experience
-                in this field provides complete range of marketing materials and
-                clienting solution to any industry as well as corporate clients
-                maintaining their reputation and increasing the client awareness
-                using PR & other print media & online marketing activities.
+                {profileData.aboutText}
               </p>
               <p className="ms-text">{profileData.secondaryText}</p>
               <div className="ms-about-info">
                 <ul className="m-r-30">
                   <li>
                     <span className="title">
-                      Full Name<b>:</b>
+                      Nama Lengkap<b>:</b>
                     </span>
                     {profileData.fullName}
                   </li>
                   <li>
                     <span className="title">
-                      Age<b>:</b>
+                      Usia<b>:</b>
                     </span>
                     {profileData.age}
                   </li>
                   <li>
                     <span className="title">
-                      Language<b>:</b>
+                      Bahasa<b>:</b>
                     </span>
                     {profileData.languages}
                   </li>
                   <li>
                     <span className="title">
-                      Phone No<b>:</b>
+                      No Telepon<b>:</b>
                     </span>
                     {profileData.phone}
                   </li>
@@ -57,7 +53,7 @@ const About = () => {
                   </li>
                   <li>
                     <span className="title">
-                      Address<b>:</b>
+                      Alamat<b>:</b>
                     </span>
                     <span>{profileData.address}</span>
                   </li>
@@ -71,17 +67,6 @@ const About = () => {
                 {skillsData.map((skill) => (
                   <div key={skill.id} className="col-md-6">
                     <div className="ms-box">
-                      {/* {skill.icon && (
-                        <img
-                          src={skill.icon}
-                          alt={skill.name}
-                          style={{
-                            width: "60px",
-                            height: "60px",
-                            marginBottom: "10px",
-                          }}
-                        />
-                      )} */}
                       <svg
                         className={`progress noselect ${skill.active ? "active" : ""}`}
                         data-progress={skill.percentage}

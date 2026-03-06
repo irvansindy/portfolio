@@ -2,9 +2,9 @@ export const experienceData = {
   education: [
     {
       id: 1,
-      title: "Master in Computer Engineering",
+      title: "Diploma 3 Teknik Informatika",
       subtitle: "First Class",
-      date: "June 15, 2013 - 2016",
+      date: "2016 - 2019",
       description:
         "Lorem Ipsum Commodo Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam",
     },

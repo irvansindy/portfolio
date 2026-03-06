@@ -9,18 +9,20 @@ import { skillsData } from "./skillsData";
 // PROFILE DATA
 // ============================================================
 export const profileData = {
-  fullName: "Maria Ilvor",
-  age: "26 Years",
-  languages: "English, Spanish",
-  phone: "+00 9876543210",
-  email: "example@gmail.com",
-  address: "Ruami Mello Moraes, - Salvador - MA, 40352, Brazil.",
+  fullName: "Irvan Sindy",
+  age: "28 Years",
+  languages: "Indonesia, English",
+  phone: "+62 895334359983",
+  email: "irvansindy7@gmail.com",
+  address: "Villa regency 2, Tangerang",
   title: "Web Developer",
-  tagline: "Creativity bleeds from the pen of inspiration.",
+  // tagline: "Creativity bleeds from the pen of inspiration.",
+  tagline: "Kreatifitas akan selalu ada .",
   aboutText:
-    "I am your client Consultant having 8+ years of experience in this field provides complete range of marketing materials and clienting solution to any industry as well as corporate clients maintaining their reputation and increasing the client awareness using PR & other print media & online marketing activities.",
+    "Saya adalah seorang Web Developer dengan pengalaman lebih dari 4 tahun dalam membangun berbagai jenis website dan web application. Fokus utama saya adalah menggunakan Laravel untuk mengembangkan sistem yang scalable, aman, dan mudah dikelola. Saya terbiasa membangun company profile, dashboard admin, hingga aplikasi web kustom sesuai kebutuhan bisnis.",
+
   secondaryText:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the text ever since the 1500s.",
+    "Selain Laravel, saya juga memiliki pengalaman menggunakan berbagai teknologi seperti React, Vue, jQuery, Go, dan Express untuk membangun aplikasi yang modern dan efisien. Saya juga menggunakan pendekatan No-Code Development dengan Webflow untuk membuat website yang cepat, responsif, dan mudah dikelola oleh klien.",
   heroImage: "/assets/images/hero/my-img-dark.png", // ✅ public path langsung
   cvUrl: "#",
 };
@@ -36,8 +38,8 @@ export { skillsData };
 export const countersData = [
   { id: 1, number: 156, label: "Clients" },
   { id: 2, number: 394, label: "Projects" },
-  { id: 3, number: 37,  label: "Countries", active: true },
-  { id: 4, number: 21,  label: "Awords" },
+  { id: 3, number: 37, label: "Countries", active: true },
+  { id: 4, number: 21, label: "Awords" },
 ];
 
 // ============================================================
