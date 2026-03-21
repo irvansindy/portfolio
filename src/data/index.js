@@ -3,21 +3,39 @@
 // semua path bisa pakai string langsung tanpa import
 // ============================================================
 
-import { skillsData } from "./skillsData";
+import { skillsData as defaultSkillsData } from "./skillsData";
+import { cmsDataService } from "../services/cmsDataService";
 
 // ============================================================
 // PROFILE DATA
 // ============================================================
+const birthDate = new Date("1997-06-27");
+
+function calculateAge(birthDate) {
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  return age;
+}
+const ageInYears = calculateAge(birthDate);
+
 export const profileData = {
   fullName: "Irvan Sindy",
-  age: "28 Years",
+  age: `${calculateAge(birthDate)} Tahun`,
   languages: "Indonesia, English",
-  phone: "+62 895334359983",
+  phone: "(+62)-895334359983",
   email: "irvansindy7@gmail.com",
   address: "Villa regency 2, Tangerang",
   title: "Web Developer",
   // tagline: "Creativity bleeds from the pen of inspiration.",
-  tagline: "Kreatifitas akan selalu ada .",
+  tagline: "Kreatifitas akan selalu ada.",
+  shortDetail:
+    "Terbuka untuk terhubung dan berkolaborasi membangun web apps yang memberi solusi nyata.",
   aboutText:
     "Saya adalah seorang Web Developer dengan pengalaman lebih dari 4 tahun dalam membangun berbagai jenis website dan web application. Fokus utama saya adalah menggunakan Laravel untuk mengembangkan sistem yang scalable, aman, dan mudah dikelola. Saya terbiasa membangun company profile, dashboard admin, hingga aplikasi web kustom sesuai kebutuhan bisnis.",
 
@@ -28,9 +46,18 @@ export const profileData = {
 };
 
 // ============================================================
-// SKILLS DATA
+// SKILLS DATA - Load dari CMS Service
 // ============================================================
-export { skillsData };
+export const skillsData = cmsDataService.getSkillsData();
+
+// ============================================================
+// Export function untuk mendapatkan data terbaru dari CMS
+// ============================================================
+export const getExperienceData = () => cmsDataService.getExperienceData();
+export const getPortfolioData = () => cmsDataService.getPortfolioData();
+export const getServicesData = () => cmsDataService.getServicesData();
+export const getNewsData = () => cmsDataService.getNewsData();
+export const getSkillsData = () => cmsDataService.getSkillsData();
 
 // ============================================================
 // COUNTERS DATA
@@ -60,12 +87,12 @@ export const clientsData = [
 // CONTACT DATA
 // ============================================================
 export const contactData = {
-  email: "mail.example@gmail.com",
+  email: "irvansindy7@gmail.com",
   website: "www.yourdomain.com",
-  phone1: "(+91)-9876XXXXX",
-  phone2: "(+91)-987654XXXX",
-  address: "Ruami Mello Moraes Filho, 987 - Salvador - MA, 40352, Brazil.",
-  whatsappNumber: "918866774266",
+  phone1: "(+62)-895334359983",
+  // phone2: "(+62)-895334359983",
+  address: "Villa regency 2, Tangerang",
+  whatsappNumber: "(+62)-895334359983",
   whatsappMessage: "Share me your latest resume, HR from masterly...",
 };
 

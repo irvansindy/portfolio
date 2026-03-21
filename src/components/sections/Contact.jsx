@@ -35,9 +35,9 @@ const Contact = () => {
       <div className="container d-block">
         <div className="section-title">
           <h2>
-            Get in <span>Touch</span>
+            Hubungi <span>Saya</span>
           </h2>
-          <span className="ligh-title">Contact</span>
+          <span className="ligh-title">Kontak</span>
         </div>
         <div className="row m-b-minus-30px">
           <div className="col-lg-5 col-md-12 m-b-991-20">
@@ -48,7 +48,7 @@ const Contact = () => {
                   <i className="fa fa-envelope" aria-hidden="true"></i>
                 </div>
                 <div className="info">
-                  <h3 className="title">Mail & Website</h3>
+                  <h3 className="title">Email & Website</h3>
                   <p>
                     <i className="fa fa-envelope" aria-hidden="true"></i> &nbsp;
                     {contactData.email}
@@ -69,15 +69,15 @@ const Contact = () => {
                   <i className="fa fa-mobile" aria-hidden="true"></i>
                 </div>
                 <div className="info">
-                  <h3 className="title">Contact</h3>
+                  <h3 className="title">Telepon/WhatsApp</h3>
                   <p>
                     <i className="fa fa-mobile" aria-hidden="true"></i> &nbsp;
                     {contactData.phone1}
                   </p>
-                  <p>
+                  {/* <p>
                     <i className="fa fa-mobile" aria-hidden="true"></i> &nbsp;
                     {contactData.phone2}
-                  </p>
+                  </p> */}
                 </div>
               </div>
               <div className="space"></div>
@@ -90,7 +90,7 @@ const Contact = () => {
                   <i className="fa fa-map-marker" aria-hidden="true"></i>
                 </div>
                 <div className="info">
-                  <h3 className="title">Address</h3>
+                  <h3 className="title">Alamat</h3>
                   <p>
                     <i className="fa fa-map-marker" aria-hidden="true"></i>{" "}
                     &nbsp;
@@ -110,7 +110,7 @@ const Contact = () => {
                   type="text"
                   className="form-control"
                   id="fullName"
-                  placeholder="Full Name"
+                  placeholder="Nama Lengkap"
                   value={formData.fullName}
                   onChange={handleChange}
                 />
@@ -130,7 +130,7 @@ const Contact = () => {
                   type="text"
                   className="form-control"
                   id="phone"
-                  placeholder="Phone"
+                  placeholder="Nomor Telepon"
                   value={formData.phone}
                   onChange={handleChange}
                 />
@@ -140,14 +140,25 @@ const Contact = () => {
                   className="form-control"
                   id="message"
                   rows="4"
-                  placeholder="Message"
+                  placeholder="Pesan"
                   value={formData.message}
                   onChange={handleChange}
                 ></textarea>
               </div>
-              <button type="submit" className="ms-learn-more-right">
-                <span className="text">Submit</span>
-              </button>
+              {/* <button type="submit" className="ms-learn-more-right">
+                <span className="text">Kirim Pesan</span>
+              </button> */}
+
+              <a
+                href="#"
+                className="ms-learn-more-right"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSubmit(e);
+                }}
+              >
+                <span className="text">Kirim Pesan</span>
+              </a>
             </form>
           </div>
         </div>

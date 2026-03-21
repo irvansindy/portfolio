@@ -4,13 +4,13 @@ const Sidebar = ({ isOpen, onClose }) => {
   const [activeItem, setActiveItem] = useState("#home");
 
   const navItems = [
-    { id: 1, label: "Home", href: "#home" },
-    { id: 2, label: "About", href: "#about" },
-    { id: 3, label: "Experience", href: "#experience" },
-    { id: 4, label: "Service", href: "#service" },
-    { id: 5, label: "Portfolio", href: "#portfolio" },
-    { id: 6, label: "News", href: "#news" },
-    { id: 7, label: "Contacts", href: "#contact" },
+    { id: 1, label: "Beranda", href: "#home" },
+    { id: 2, label: "Tentang", href: "#about" },
+    { id: 3, label: "Pengalaman", href: "#experience" },
+    { id: 4, label: "Layanan", href: "#service" },
+    { id: 5, label: "Proyek", href: "#portfolio" },
+    { id: 6, label: "Berita", href: "#news" },
+    { id: 7, label: "Kontak", href: "#contact" },
   ];
 
   const handleNavClick = (e, href) => {

@@ -1,7 +1,14 @@
-import React from "react";
-import { profileData, skillsData } from "../../data/index";
+import React, { useState, useEffect } from "react";
+import { profileData } from "../../data/index";
+import { cmsDataService } from "../../services/cmsDataService";
 
 const About = () => {
+  const [skillsData, setSkillsData] = useState([]);
+
+  useEffect(() => {
+    const data = cmsDataService.getSkillsData();
+    setSkillsData(data);
+  }, []);
   return (
     <section id="about" className="ms-about padding-tb-80 sec-bg">
       <div className="container">
@@ -15,15 +22,13 @@ const About = () => {
           <div className="col-lg-6">
             <div className="ms-about-detail m-b-991">
               <h4>{profileData.tagline}</h4>
-              <p className="ms-text">
-                {profileData.aboutText}
-              </p>
+              <p className="ms-text">{profileData.aboutText}</p>
               <p className="ms-text">{profileData.secondaryText}</p>
               <div className="ms-about-info">
                 <ul className="m-r-30">
                   <li>
                     <span className="title">
-                      Nama Lengkap<b>:</b>
+                      Nama<b>:</b>
                     </span>
                     {profileData.fullName}
                   </li>

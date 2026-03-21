@@ -1,7 +1,13 @@
-import React from "react";
-import { newsData } from "../../data/newsData";
+import React, { useState, useEffect } from "react";
+import { cmsDataService } from "../../services/cmsDataService";
 
 const News = () => {
+  const [newsData, setNewsData] = useState([]);
+
+  useEffect(() => {
+    const data = cmsDataService.getNewsData();
+    setNewsData(data);
+  }, []);
   return (
     <section id="news" className="ms-news padding-tb-80">
       <div className="container">

@@ -1,32 +1,39 @@
-import React, { useState } from "react";
-import { portfolioData } from "../../data/portfolioData";
+import React, { useState, useEffect } from "react";
+import { cmsDataService } from "../../services/cmsDataService";
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [portfolioData, setPortfolioData] = useState([]);
 
-  const filters = ["all", "design", "development", "graphics", "templates"];
+  useEffect(() => {
+    const data = cmsDataService.getPortfolioData();
+    setPortfolioData(data);
+  }, []);
 
-  const filteredProjects =
-    activeFilter === "all"
-      ? portfolioData
-      : portfolioData.filter((project) =>
-          project.category.includes(activeFilter),
-        );
+  // const filters = ["all", "design", "development", "graphics", "templates"];
+  // const filteredProjects =
+  //   activeFilter === "all"
+  //     ? portfolioData
+  //     : portfolioData.filter((project) =>
+  //         project.category.includes(activeFilter),
+  //       );
+
+  const filteredProjects = portfolioData;
 
   return (
     <section id="portfolio" className="ms-portfolio padding-tb-80">
       <div className="container">
         <div className="section-title">
           <h2>
-            My <span>Projects</span>
+            Proyek <span>Saya</span>
           </h2>
-          <span className="ligh-title">Portfolio</span>
+          <span className="ligh-title">Proyek</span>
         </div>
         <div className="row m-b-minus-24px">
           <div className="portfolio-content">
             <div>
               <div className="row">
-                <div className="col-sm-12">
+                {/* Filter tabs - commented out */}
+                {/* <div className="col-sm-12">
                   <div className="portfolio-tabs">
                     <ul>
                       {filters.map((filter) => (
@@ -41,7 +48,7 @@ const Portfolio = () => {
                       ))}
                     </ul>
                   </div>
-                </div>
+                </div> */}
                 <div className="col-md-12 col-sm-12">
                   <div className="portfolio-content-items">
                     <div className="row m-b-minus-30px">

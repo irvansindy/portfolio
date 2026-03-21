@@ -29,6 +29,9 @@ export const initializeExternalLibraries = async () => {
     // jQuery (WAJIB pertama)
     await loadExternalScript("/assets/js/vendor/jquery-3.1.1.min.js", "jquery");
 
+    // pastikan global
+    window.$ = window.jQuery;
+
     // Bootstrap
     await loadExternalScript(
       "/assets/js/vendor/bootstrap.bundle.min.js",

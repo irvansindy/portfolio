@@ -1,15 +1,21 @@
-import React from "react";
-import { servicesData } from "../../data/servicesData";
+import React, { useState, useEffect } from "react";
+import { cmsDataService } from "../../services/cmsDataService";
 
 const Service = () => {
+  const [servicesData, setServicesData] = useState([]);
+
+  useEffect(() => {
+    const data = cmsDataService.getServicesData();
+    setServicesData(data);
+  }, []);
   return (
     <section id="service" className="ms-service padding-tb-80 sec-bg">
       <div className="container">
         <div className="section-title d-none">
           <h2>
-            My<span> service</span>
+            Layanan<span> Saya</span>
           </h2>
-          <span className="ligh-title">service</span>
+          <span className="ligh-title">Layanan</span>
         </div>
         <div className="row service-box m-tb-minus-15px">
           {servicesData.map((service) => (
@@ -34,7 +40,7 @@ const Service = () => {
                       <h3>{service.title}</h3>
                       <p>{service.fullDescription}</p>
                       <a href="#" className="btn">
-                        Read more
+                        Baca Selengkapnya
                       </a>
                     </div>
                   </div>

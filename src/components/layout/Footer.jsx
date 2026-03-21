@@ -7,11 +7,11 @@ const Footer = () => {
       <div className="container">
         <div className="ms-footer-detail">
           <div className="ms-copy">
-            Copyright ©{" "}
+            Hak Cipta ©{" "}
             <a className="site-name" href="index.html">
-              Masterly
+              Irvan Sindy
             </a>{" "}
-            all rights reserved. Powered by Masterly
+            2026
           </div>
           <div className="ms-social">
             <ul>
@@ -21,7 +21,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fa fa-facebook" aria-hidden="true"></i>
+                  <i className="fa-brands fa-facebook" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
@@ -30,7 +30,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fa fa-instagram" aria-hidden="true"></i>
+                  <i className="fa-brands fa-instagram" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
@@ -39,7 +39,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fa fa-twitter" aria-hidden="true"></i>
+                  <i className="fa-brands fa-twitter" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
@@ -48,7 +48,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fa fa-linkedin" aria-hidden="true"></i>
+                  <i className="fa-brands fa-linkedin" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>

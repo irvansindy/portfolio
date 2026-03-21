@@ -1,7 +1,15 @@
-import React from "react";
-import { experienceData } from "../../data/experienceData";
+import React, { useState, useEffect } from "react";
+import { cmsDataService } from "../../services/cmsDataService";
 
 const Experience = () => {
+  const [experienceData, setExperienceData] = useState(null);
+
+  useEffect(() => {
+    const data = cmsDataService.getExperienceData();
+    setExperienceData(data);
+  }, []);
+
+  if (!experienceData) return null;
   return (
     <section id="experience" className="ms-experience padding-tb-80">
       <div className="container">
@@ -10,7 +18,7 @@ const Experience = () => {
             <h2>
               Resume <span>Saya</span>
             </h2>
-            <span className="ligh-title">Prestasi</span>
+            <span className="ligh-title">Resume</span>
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12">
             <div className="education ms-ex-box m-b-991">

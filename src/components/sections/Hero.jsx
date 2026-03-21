@@ -23,19 +23,15 @@ const Hero = () => {
             <div className="ms-hero-detail">
               <h2 className="ms-hero-title title-right-overflow">
                 <span>
-                  Hello, <br />
-                  I am
+                  Halo, <br />
+                  Saya
                   <br />
                   <span className="name">&nbsp; {profileData.fullName}</span>
                 </span>
               </h2>
-              <p className="ms-hero-detail">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-              </p>
+              <p className="ms-hero-detail">{profileData.shortDetail}</p>
               <a href={profileData.cvUrl} className="ms-learn-more-right">
-                <span className="text">Download CV</span>
+                <span className="text">Unduh CV</span>
               </a>
             </div>
             <div className="ms-hero-img">

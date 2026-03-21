@@ -302,7 +302,7 @@ p {
 .ms-learn-more-right .text {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  padding: 10px 30px 10px 15px;
+  /* padding: 10px 30px 10px 15px; */
   font-family: "Poppins, sans-serif";
   font-size: 14px;
   line-height: 22px;
@@ -1818,6 +1818,22 @@ li.mixitup-control-active {
   margin: 10px 0 0 0;
   border: 0;
   background: transparent;
+}
+.ms-contact form button.ms-learn-more-right {
+  height: 40px !important;
+  margin: 0 !important;
+  margin-left: 130px !important;
+  padding: 0 !important;
+  border-radius: 30px !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.ms-contact form button.ms-learn-more-right .text {
+  padding: 0 30px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
 }
 .ms-contact .ms-box {
   margin-bottom: 30px;

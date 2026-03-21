@@ -332,6 +332,7 @@ p {
   position: absolute;
   top: 50%;
   right: 0;
+  display: none;
 }
 .ms-learn-more-right .ring-left {
   margin-right: -20px;
@@ -995,6 +996,22 @@ header nav a:hover .svg_img {
   margin: 10px 0 0 0;
   border: 0;
   background: transparent;
+}
+.ms-contact form button.ms-learn-more-right {
+  height: 40px !important;
+  margin: 0 !important;
+  margin-left: 130px !important;
+  padding: 0 !important;
+  border-radius: 30px !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.ms-contact form button.ms-learn-more-right .text {
+  padding: 0 30px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
 }
 .ms-contact .ms-box {
   margin-bottom: 30px;

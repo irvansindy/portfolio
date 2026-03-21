@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = ({ onMenuClick }) => {
+const Header = ({ onMenuClick, onAdminClick }) => {
   return (
     <header>
       <nav>
