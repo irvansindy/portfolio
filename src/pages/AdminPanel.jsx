@@ -6,6 +6,7 @@ import PortfolioManager from "../components/admin/PortfolioManager";
 import ServicesManager from "../components/admin/ServicesManager";
 import NewsManager from "../components/admin/NewsManager";
 import SkillsManager from "../components/admin/SkillsManager";
+import CVManager from "../components/admin/CVManager";
 import "../styles/admin.css";
 
 function AdminPanel() {
@@ -85,6 +86,12 @@ function AdminPanel() {
         >
           ⚡ Skills
         </button>
+        <button
+            className={`tab-btn ${activeTab === "cv" ? "active" : ""}`}
+            onClick={() => setActiveTab("cv")}
+            >
+            📄 CV
+        </button>
       </div>
 
       {/* Tab Content */}
@@ -100,6 +107,7 @@ function AdminPanel() {
         )}
         {activeTab === "news" && <NewsManager onSuccess={showFeedback} />}
         {activeTab === "skills" && <SkillsManager onSuccess={showFeedback} />}
+        {activeTab === "cv" && <CVManager onSuccess={showFeedback} />}
       </div>
 
       {/* Footer Actions */}

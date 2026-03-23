@@ -31,7 +31,7 @@ export const profileData = {
   phone: "(+62)-895334359983",
   email: "irvansindy7@gmail.com",
   address: "Villa regency 2, Tangerang",
-  title: "Web Developer",
+  title: "Full Stack Developer",
   // tagline: "Creativity bleeds from the pen of inspiration.",
   tagline: "Kreatifitas akan selalu ada.",
   shortDetail:

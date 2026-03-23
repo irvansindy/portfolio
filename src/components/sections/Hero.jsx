@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { profileData } from "../../data/index";
+import { cvService } from "../../services/cvService";
 
 const Hero = () => {
+  const [cvAvailable, setCvAvailable] = useState(false);
+  useEffect(() => {
+    setCvAvailable(!!cvService.getCV());
+  }, []);
+
   const handleScrollToAbout = () => {
     const aboutSection = document.getElementById("about");
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleDownloadCV = (e) => {
+    e.preventDefault();
+    const cv = cvService.getCV();
+    if (cv) {
+      const link = document.createElement("a");
+      link.href = cv.base64;
+      link.download = cv.name;
+      link.click();
+    } else if (profileData.cvUrl) {
+      // Fallback ke URL statis jika ada
+      window.open(profileData.cvUrl, "_blank");
+    } else {
+      alert("CV belum tersedia. Silakan hubungi saya.");
     }
   };
 
@@ -17,6 +39,7 @@ const Hero = () => {
       <div className="ms-diamond-4"></div>
       <div className="ms-diamond-5"></div>
       <div className="ms-diamond-6"></div>
+
       <div className="container">
         <div className="hero-content">
           <div className="hero-item static">
@@ -30,7 +53,13 @@ const Hero = () => {
                 </span>
               </h2>
               <p className="ms-hero-detail">{profileData.shortDetail}</p>
-              <a href={profileData.cvUrl} className="ms-learn-more-right">
+              {/* Tombol CV yang dinamis */}
+
+              <a href="#"
+                className="ms-learn-more-right"
+                onClick={handleDownloadCV}
+                title={cvAvailable ? "Unduh CV" : "CV belum tersedia"}
+              >
                 <span className="text">Unduh CV</span>
               </a>
             </div>
